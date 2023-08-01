@@ -8096,6 +8096,7 @@ module.exports = kuromoji;
 
 var zlib = require("zlibjs/bin/gunzip.min.js");
 var Zlib = ("Zlib" in zlib) ? zlib.Zlib : zlib;
+var Gunzip = ("Gunzip" in Zlib) ? Zlib.Gunzip : zlib.gunzip;
 var DictionaryLoader = require("./DictionaryLoader");
 
 /**
@@ -8121,7 +8122,7 @@ BrowserDictionaryLoader.prototype.loadArrayBuffer = function (url, callback) {
         }
 
         response.arrayBuffer().then(function (arraybuffer) {
-            var gz = new Zlib.Gunzip(new Uint8Array(arraybuffer));
+            var gz = new Gunzip(new Uint8Array(arraybuffer));
             var typed_array = gz.decompress();
             callback(null, typed_array.buffer);
         });
