@@ -1,12 +1,9 @@
-version: "2"
-plugins:
-  tslint:
-    enabled: true
-    config: tslint.json
+languages:
+  JavaScript: true
 exclude_paths:
+- "build/**"
 - "demo/**"
 - "dict/**"
 - "example/**"
 - "test/**"
-- "tools/**"
-- "rollup.config.ts"
+- "gulpfile.js"
