@@ -1,7 +1,7 @@
 {
   "name": "@sglkc/kuromoji",
   "description": "Forked version of kuromoji with better compatibility for browsers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "sglkc",
   "browser": {
     "./src/loader/NodeDictionaryLoader.js": "./src/loader/BrowserDictionaryLoader.js"
