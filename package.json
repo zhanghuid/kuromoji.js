@@ -1,15 +1,15 @@
 {
-  "name": "kuromoji",
-  "description": "JavaScript implementation of Japanese morphological analyzer",
-  "version": "0.2.0",
-  "author": "Takuya Asano <takuya.a@gmail.com>",
+  "name": "@sglkc/kuromoji",
+  "description": "Forked version of kuromoji with better compatibility for browsers",
+  "version": "1.0.0",
+  "author": "sglkc",
   "browser": {
     "./src/loader/NodeDictionaryLoader.js": "./src/loader/BrowserDictionaryLoader.js"
   },
   "bugs": {
-    "url": "https://github.com/takuyaa/kuromoji.js/issues"
+    "url": "https://github.com/sglkc/kuromoji.js/issues"
   },
-  "homepage": "https://github.com/takuyaa/kuromoji.js",
+  "homepage": "https://github.com/sglkc/kuromoji.js",
   "keywords": [
     "japanese",
     "morphological analyzer",
@@ -22,7 +22,7 @@
   "main": "./src/kuromoji.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/takuyaa/kuromoji.js.git"
+    "url": "https://github.com/sglkc/kuromoji.js.git"
   },
   "scripts": {
     "build": "gulp build",
