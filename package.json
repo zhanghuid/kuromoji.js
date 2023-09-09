@@ -20,6 +20,7 @@
   ],
   "license": "Apache-2.0",
   "main": "./src/kuromoji.js",
+  "types": "./src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/sglkc/kuromoji.js.git"
@@ -45,6 +46,7 @@
     "fflate": "^0.8.0"
   },
   "devDependencies": {
+    "@types/doublearray": "0.0.29",
     "browserify": "^16.1.1",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
