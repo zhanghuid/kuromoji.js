@@ -43,11 +43,14 @@ DictionaryLoader.prototype.load = function (load_callback) {
     var dic_path = this.dic_path;
     var loadArrayBuffer = this.loadArrayBuffer;
     var dic_path_url = function (filename) {
-        var separator = '/';
-        var replace = new RegExp(separator+'{1,}', 'g');
-        var path = [dic_path, filename].join(separator).replace(replace, separator);
-
-        return path;
+        try {
+            return new URL(filename, dic_path).toString()
+        } catch (error) {
+            var separator = '/';
+            var replace = new RegExp(separator + '{1,}', 'g');
+            var path = [dic_path, filename].join(separator).replace(replace, separator);
+            return path;
+        }
     }
 
     async.parallel([
