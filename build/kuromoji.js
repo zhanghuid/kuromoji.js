@@ -10661,7 +10661,10 @@ DictionaryLoader.prototype.load = function (load_callback) {
     var loadArrayBuffer = this.loadArrayBuffer;
     var dic_path_url = function (filename) {
         try {
-            return new URL(filename, dic_path).toString()
+            if (!dic_path.endsWith('/')) {
+                dic_path += '/';
+            }
+            return new URL(`${dic_path}${filename}`).toString()
         } catch (error) {
             var separator = '/';
             var replace = new RegExp(separator + '{1,}', 'g');
